@@ -39,7 +39,7 @@
 7.常用命令，可以在Git Book 中查看具体怎么使用
 
         git init
-        git clone https://github.com/xxxx/yyyy.git
+        git clone https://github.com/AimeeLee23/main-station.git
         git remote -v
         git remote add
         git status
@@ -66,15 +66,15 @@ id_rsa      id_rsa.pub  known_hosts
 ```
 ➜  .ssh ssh-keygen
     Generating public/private rsa key pair.
-    Enter file in which to save the key (/Users/xxx/.ssh/id_rsa):
-    /Users/xxx/.ssh/id_rsa already exists.
+    Enter file in which to save the key (/Users/lining/.ssh/id_rsa):
+    /Users/lining/.ssh/id_rsa already exists.
     Overwrite (y/n)? y
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again:
-    Your identification has been saved in /Users/xxx/.ssh/id_rsa.
-    Your public key has been saved in /Users/xxx/.ssh/id_rsa.pub.
+    Your identification has been saved in /Users/lining/.ssh/id_rsa.
+    Your public key has been saved in /Users/lining/.ssh/id_rsa.pub.
     The key fingerprint is:
-    SHA256:gRbgN4l2nZHdtq4VhHRlWXXeWz3GL25bMBTdnLfwcr4 xxx@yyyy
+    SHA256:gRbgN4l2nZHdtq4VhHRlWXXeWz3GL25bMBTdnLfwcr4 lining@liningningdeMacBook-Pro.local
     The key's randomart image is:
     +---[RSA 2048]----+
     |    ... .+.o..+=B|

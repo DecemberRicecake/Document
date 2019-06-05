@@ -9,17 +9,8 @@
 ##### 1. jdk(我选了1.8)
 ##### 2. mysql（docker）  
 
-安装mysql
 
-```
-docker pull mysql:5.7
-```
-
-启动mysql（设置端口、账号密码、本地路径）
-
-```
-docker run --name mysql-5.7 -v /root/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql:5.7
-```
+[安装mysql](/mysql/mysql-linux.md)
 
 建数据库
 ```
@@ -55,27 +46,27 @@ http://10.40.4.200:9000
 看了下数据库，账号是admin，猜了下密码，果然也是admin，登进去了，给跪了！！！
 
 ##### 生成token:
-![1.png](1.png)   
+![1.png](pic/1.png)   
 
 ##### 生成命令:
-![2.png](2.png)  
+![2.png](pic/2.png)  
 
 
 ## 使用方式：
 ### 1. 直接在idea中使用命令:（so easy~~）  
 
-![3.png](3.png)  
+![3.png](pic/3.png)  
 
 ### 2. jenkins持续集成:  
 - ①在系统管理--插件管理中，安装SonarQube Scanner for Jenkins插件，安装后重启jenkins  
 
 - ②在系统管理--全局工具配置中，设置扫描工具
 
-![6.png](6.png)  
+![6.png](pic/6.png)  
 
 - ③在系统管理--系统设置中，配置SonarQube的servers地址，其中的token就是上面mvn命令中的login的值  
 
-![4.png](4.png)  
+![4.png](pic/4.png)  
 
 - ④在项目根目录下创建sonar-project.properties、Jenkinsfile.web这两个文件  
 
@@ -100,7 +91,7 @@ sonar.java.binaries=.
 
 ```
 
-![7.png](7.png)  
+![7.png](pic/7.png)  
 
 ###### Jenkinsfile.web  
 
@@ -128,12 +119,12 @@ node {
 - ⑤创建一个Pipeline（流水线）任务  
 需要注意私有项目的话，需要添加jenkins凭证，这个凭证需要进入jenkins容器中生成，  
 直接在linux服务器上生成是错误的，生成的公钥添加在gitlab上，私钥添加在jenkins上
-![5.png](5.png)  
+![5.png](pic/5.png)  
 
 
 - ⑥构建成功后，就能在Sonarqube网页上查看扫描结果了：  
 
-![8.png](8.png) 
+![8.png](pic/8.png) 
 
 
 ## 学习总结：  
