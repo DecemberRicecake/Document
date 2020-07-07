@@ -9,7 +9,7 @@ docker pull mysql:5.7
 ### 启动mysql（设置端口、账号密码、本地路径）
 
 ```
-docker run --name mysql-5.7 -v /root/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql:5.7
+docker run --name mysql-5.7 --privileged=true  -v /root/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql:5.7
 ```
 
 ### 建数据库
